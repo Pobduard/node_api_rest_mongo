@@ -1,15 +1,17 @@
+@url = nodeapirestmongo-production-7f00.up.railway.app
+@railwayBooks = {{url}}/books
 @booksUrl = http://localhost:3000/books
 @Id = 66ff6c58b0087b4a9f2b6ed5
 @booksUrlId = http://localhost:3000/books/{{Id}}
 
 ### Get All
-GET {{booksUrl}} HTTP/1.1
+GET {{railwayBooks}} HTTP/1.1
 
 ### Get Individual
 GET {{booksUrl}}/66ff6c58b0087b4a9f2b6ed5 HTTP/1.1
 
 ### POST, para subir nuevas cosas
-POST {{booksUrl}} HTTP/1.1
+POST {{railwayBooks}} HTTP/1.1
 Content-Type: application/json
 
 {
@@ -41,3 +43,7 @@ Content-Type: application/json
 
 ### Delete
 DELETE {{booksUrl}}/6700b9ba6600002c579b7834 HTTP/1.1
+
+### TEST
+
+GET https://nodeapirestmongo-production-7f00.up.railway.app/books HTTP/1.1
