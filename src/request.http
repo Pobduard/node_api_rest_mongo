@@ -1,0 +1,43 @@
+@booksUrl = http://localhost:3000/books
+@Id = 66ff6c58b0087b4a9f2b6ed5
+@booksUrlId = http://localhost:3000/books/{{Id}}
+
+### Get All
+GET {{booksUrl}} HTTP/1.1
+
+### Get Individual
+GET {{booksUrl}}/66ff6c58b0087b4a9f2b6ed5 HTTP/1.1
+
+### POST, para subir nuevas cosas
+POST {{booksUrl}} HTTP/1.1
+Content-Type: application/json
+
+{
+	"title": "Alicia en el Pais de las Maravillas",
+	"author": "L. Carroll",
+	"genere": "Fantasia",
+	"publication_date": "1865"
+}
+
+### Put, pa cambiar todo el cuerpo
+PUT {{booksUrlId}} HTTP/1.1
+Content-Type: application/json
+
+{
+	"title": "1984",
+	"author": "G. Orwell",
+	"genere": "Drama",
+	"publication_date": "1948"
+}
+
+### Patch, para cambiar 1 sola cosa
+PATCH  {{booksUrlId}} HTTP/1.1
+Content-Type: application/json
+
+{
+	"genere": "Distopia"
+}	
+### Recordar que NO puede haber , al final de cosas
+
+### Delete
+DELETE {{booksUrl}}/6700b9ba6600002c579b7834 HTTP/1.1

@@ -1,0 +1,27 @@
+{
+	"name": "proyecto-node-crud",
+	"version": "1.0.0",
+	"description": "",
+	"main": "src/app.js",
+	"type": "module",
+	"scripts": {
+		"dev": "nodemon src/app.js",
+		"start": "node src/app.js",
+		"docker": "docker compose up"
+	},
+	"author": "Pob",
+	"license": "ISC",
+	"packageManager": "pnpm@9.11.0+sha256.1c0e33f70e5df9eede84a357bdfa0b1f9dba6e58194628d48a1055756f553754",
+	"dependencies": {
+		"body-parser": "^1.20.3",
+		"dotenv": "^16.4.5",
+		"express": "^4.21.0",
+		"mongoose": "^8.6.3"
+	},
+	"devDependencies": {
+		"@types/body-parser": "^1.19.5",
+		"@types/express": "^4.17.21",
+		"@types/node": "^22.6.1",
+		"nodemon": "^3.1.7"
+	}
+}
